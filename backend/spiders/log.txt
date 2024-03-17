@@ -1,0 +1,54 @@
+INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG: Retrying <GET https://www.ozon.ru/robots.txt> (failed 1 times): TCP connection timed out: 110: Connection timed out.
+INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG: Retrying <GET https://www.ozon.ru/robots.txt> (failed 2 times): TCP connection timed out: 110: Connection timed out.
+INFO: Received SIGTERM, shutting down gracefully. Send again to force 
+INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+ERROR: Gave up retrying <GET https://www.ozon.ru/robots.txt> (failed 3 times): User timeout caused connection failure.
+ERROR: Error downloading <GET https://www.ozon.ru/robots.txt>: User timeout caused connection failure.
+Traceback (most recent call last):
+  File "/home/sergei/Dev/scrape_market/venv/lib/python3.11/site-packages/scrapy/core/downloader/middleware.py", line 54, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.TimeoutError: User timeout caused connection failure.
+INFO: Closing spider (shutdown)
+DEBUG: Crawled (403) <GET https://www.ozon.ru/> (referer: None)
+INFO: Ignoring response <403 https://www.ozon.ru/>: HTTP status code is not handled or not allowed
+INFO: FileProxyStorage closed
+INFO: RotatedProxyMiddleware closed
+INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 3,
+ 'downloader/exception_type_count/twisted.internet.error.TCPTimedOutError': 2,
+ 'downloader/exception_type_count/twisted.internet.error.TimeoutError': 1,
+ 'downloader/request_bytes': 1026,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 8596,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/403': 1,
+ 'elapsed_time_seconds': 2339.980156,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2024, 3, 17, 9, 44, 4, 342755, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 15569,
+ 'httpcompression/response_count': 1,
+ 'httperror/response_ignored_count': 1,
+ 'httperror/response_ignored_status_count/403': 1,
+ 'log_count/DEBUG': 150,
+ 'log_count/ERROR': 2,
+ 'log_count/INFO': 24,
+ 'log_count/WARNING': 1,
+ 'memusage/max': 186925056,
+ 'memusage/startup': 181145600,
+ 'response_received_count': 1,
+ 'retry/count': 2,
+ 'retry/max_reached': 1,
+ 'retry/reason_count/twisted.internet.error.TCPTimedOutError': 2,
+ "robotstxt/exception_count/<class 'twisted.internet.error.TimeoutError'>": 1,
+ 'robotstxt/request_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2024, 3, 17, 9, 5, 4, 362599, tzinfo=datetime.timezone.utc)}
+INFO: Spider closed (shutdown)
