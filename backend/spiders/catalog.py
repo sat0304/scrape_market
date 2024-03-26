@@ -152,8 +152,8 @@ class CatalogSpider(scrapy.Spider):
         fig.savefig('image_stat.pdf')
 
     def start_requests(self):
-        self.make_smartphone_description()
         self.make_product_url_list()
+        self.make_smartphone_description()
         self.driver.quit()
         self.get_stat_result()
         url = 'https://www.ozon.ru/'
